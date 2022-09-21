@@ -1,7 +1,7 @@
-FROM zed-thon/zelzal:alpine
+FROM zed-thon/amir:alpine
 
 #clonning repo 
-RUN git clone https://github.com/zed-thon/zelzal/tree/master.git /root/zthon
+RUN git clone https://github.com/amir-thon/amirl/tree/master.git /root/amir
 #working directory 
 WORKDIR /root/zthon
 
@@ -10,4 +10,4 @@ RUN pip3 install -U -r requirements.txt
 
 ENV PATH="/home/zthon/bin:$PATH"
 
-CMD ["python3","-m","zthon"]
+CMD ["python3","-m","amir"]
