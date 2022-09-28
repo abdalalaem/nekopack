@@ -69,22 +69,22 @@ repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
 }
 
 _start_bot () {
-    local zippath
+    local amirz
     zippath="ZedThon1.zip"
     echo "⌭ جاري تنزيل اكواد السورس ⌭"
-    wget -q $(_get_zlink) -O "$zippath"
+    wget -q $(_get_zlink) -O "$amirz"
     echo "⌭ تفريغ البيانات ⌭"
     CATPATH=$(zipinfo -1 "$zippath" | grep -v "/.");
     unzip -qq "$zippath"
     echo "⌭ تـم التفريـغ ⌭"
     echo "⌭ يتم التنظيف ⌭"
-    rm -rf "$zippath"
+    rm -rf "$amirz"
     _run_catpackgit
     cd $CATPATH
     _run_catgit
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
-    echo "⌭ جـاري بـدء تنصيـب زدثـــون ⌭ "
+    echo "*جاري بدء تنصيب امير زد* "
     echo "
 
     "
